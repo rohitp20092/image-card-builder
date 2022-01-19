@@ -3,8 +3,16 @@ import { userService } from "services";
 export default function Home() {
   const handleSubmit = (e) => {
     e.preventDefault();
+    debugger;
     const formData = new FormData();
     // append form data and do api call
+    formData.append('file', e.target.myImage.value);
+    formData.append('title', e.target.title.value);
+    formData.append('description', e.target.description.value);
+    fetch("/api/users/postCard", {
+      method: "POST",
+      body: formData,
+    });
   };
 
   return (
@@ -14,10 +22,10 @@ export default function Home() {
         <h2>Card Builder UI</h2>
         <form onSubmit={handleSubmit}>
           <div>
-            <input type="text" />
+            <input type="text" name="title" />
           </div>
           <div>
-            <textarea />
+            <textarea name="description" />
           </div>
           <div>
             <input
