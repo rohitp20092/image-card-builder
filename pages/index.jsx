@@ -19,23 +19,35 @@ export default function Home() {
     <div className="p-4">
       <div className="container">
         <h1>Hi {userService.userValue?.firstName}!</h1>
-        <h2>Card Builder UI</h2>
+        <div className="mb-4 text-center">
+          <h2>Card Builder UI</h2>
+        </div>
         <form onSubmit={handleSubmit}>
-          <div>
-            <input type="text" name="title" />
+          <div className="mb-3 row">
+            <label className="col-sm-1 col-form-label">Title</label>
+            <div className="col-sm-10">
+              <input type="text" name="title" className="form-control" />
+            </div>
           </div>
-          <div>
-            <textarea name="description" />
+          <div className="mb-3 row">
+            <label className="col-sm-1 col-form-label">Description</label>
+            <div className="col-sm-10">
+              <textarea name="description" style={{resize: 'none'}} className="form-control" />
+            </div>
           </div>
-          <div>
-            <input
-              type="file"
-              name="myImage"
-              accept="image/png, image/gif, image/jpeg"
-            />
+          <div className="mb-3 row">
+            <label className="col-sm-1 col-form-label">Image Upload</label>
+            <div className="col-sm-10">
+              <input
+                type="file"
+                name="myImage"
+                accept="image/png, image/gif, image/jpeg"
+                className="form-control"
+              />
+            </div>
           </div>
-          <div>
-            <input type="submit" value="Submit" />
+          <div className="col-md-11 bg-light text-right">
+            <input className="btn btn-primary" type="submit" value="Submit" />
           </div>
         </form>
       </div>
