@@ -7,5 +7,14 @@
         "id": 1,
         "dateCreated": "2022-01-19T07:29:01.942Z",
         "dateUpdated": "2022-01-19T07:29:01.942Z"
+    },
+    {
+        "firstName": "Rohit",
+        "lastName": "R",
+        "username": "rohit",
+        "hash": "$2a$10$Juwx8u0ZPTysKCNlsO8aQ.C8mP7sJleoxg6Ofs0.Ku/PkTmTpC19W",
+        "id": 2,
+        "dateCreated": "2022-01-21T13:23:33.490Z",
+        "dateUpdated": "2022-01-21T13:23:33.490Z"
     }
 ]
